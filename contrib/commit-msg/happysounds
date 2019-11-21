@@ -13,8 +13,7 @@
 
 function run_test
 {
-    DIR=$HOME"/git-hooks/res/"
-
+    DIR="${HOME}/git-hooks/res"
     SOUND=` ls $DIR | while read x; do echo "\`expr $RANDOM % 1000\`:$x"; done | sort -n | sed 's/[0-9]*://' | head -1`
 
     afplay $DIR$SOUND
